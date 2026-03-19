@@ -15,6 +15,11 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
     />
     <link rel="stylesheet" href="style.css" />
+    <script src="controller/filaController.js" defer></script>
+    <script type="module" src="model/Fila.js" defer></script>
+
+    
+
   </head>
   <body>
     <div class="container">
@@ -40,7 +45,7 @@
           placeholder="Digite o nome da pessoa"
         />
         <br />
-        <button class="btn btn-primary" onclick="">Adicionar à fila</button>
+        <button class="btn btn-primary" onclick="adicionarElemento()">Adicionar à fila</button>
         <button class="btn btn-success" onclick="">Atender</button>
         <button class="btn btn-warning" onclick="">Buscar</button>
         <br />
@@ -57,5 +62,7 @@
         </div>
       </footer>
     </div>
+    
+    
   </body>
 </html>

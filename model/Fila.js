@@ -8,7 +8,7 @@ class Fila {
     this.#fim = -1;
     this.#inicio = 0;
     this.#qtd = 0;
-    this.#elementos = new Array(tamanhoVetor);
+    this.#elementos = new Array(tamanho);
   }
 
   isFull() {
@@ -37,16 +37,15 @@ class Fila {
 
     this.#qtd--;
     return this.#elementos[this.#inicio++];
-
-    /* Outra versão da linha return acima
+  }
+  /* Outra versão da linha return acima
     let removido = this.#elementos[this.inicio];
     this.#inicio++;
     return removido;
     */
 
-    /* O ++ será incrementado depois da execução 
+  /* O ++ será incrementado depois da execução 
     e se fosse antes da variável seria antes.*/
-  }
 
   //enqueue
   //isFull

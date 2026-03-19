@@ -53,13 +53,13 @@ class Fila {
   //isEmpty
 
   first() {
-    if (!this.isEmpty) {
+    if (!this.isEmpty()) {
       return this.#elementos[this.#inicio];
     }
   }
 
   last() {
-    if (!this.isEmpty) {
+    if (!this.isEmpty()) {
       return this.#elementos[this.#fim];
     }
   }

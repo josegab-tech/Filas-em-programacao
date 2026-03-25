@@ -62,15 +62,32 @@ class Fila {
 
   toString() {
     let resultado = "";
-    let i= this.#inicio;
-    for(let  cont = 0; cont < this.#qtd; cont++){
+    let i = this.#inicio;
+    for (let cont = 0; cont < this.#qtd; cont++) {
       resultado += `${this.#elementos[i]} |`;
-      if(i === this.#elementos.length-1)
-        i=0;
-      else
-        i++;
-    
+      if (i === this.#elementos.length - 1) i = 0;
+      else i++;
     }
     return resultado;
+  }
+
+  [Symbol.iterator]() {
+    let count = 0;
+    let i = this.#inicio;
+    const qtd = this.#qtd;
+    const elementos = this.#elementos;
+    const tamanho = elementos.length;
+    return {
+      next() {
+        if (count < qtd) {
+          const value = elementos[i];
+          i = (i + 1) % tamanho;
+          count++;
+          return { value, done: false };
+        } else {
+          return { done: true };
+        }
+      },
+    };
   }
 }

@@ -62,10 +62,14 @@ class Fila {
 
   toString() {
     let resultado = "";
-    for (let i = 0; i < this.#qtd; i++) {
-      // teste de toString com módulo
-      let indiceReal = (this.#inicio + i) % this.#elementos.length;
-      resultado += `${this.#elementos[indiceReal]} | `;
+    let i= this.#inicio;
+    for(let  cont = 0; cont < this.#qtd; cont++){
+      resultado += `${this.#elementos[i]} |`;
+      if(i === this.#elementos.length-1)
+        i=0;
+      else
+        i++;
+    
     }
     return resultado;
   }

@@ -32,3 +32,25 @@ function removerElemento() {
     alert("A fila já está vazia!");
   }
 }
+
+
+  function buscarElemento(){
+    let indice = 0;
+    let encontrado = false;
+    const elemento = document.getElementById("txtnovoNome"); // pegar o input
+    for (let item of minhaFila){ // percorrer a fila
+      indice ++;
+      
+      if(elemento.value === item){
+        alert("Encontrado na posição: " + indice +"°"  );
+        encontrado = true;
+      }
+      if(!encontrado){
+        alert("Não encontrado")
+      }
+        
+      
+    }
+  }
+
+  // pegar valor 

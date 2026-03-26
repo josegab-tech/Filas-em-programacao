@@ -53,4 +53,6 @@ function removerElemento() {
     }
   }
 
-  // pegar valor 
+  // criar nova classe 
+  // nome , cpf , datahora
+  // inserir a classe na fila.
